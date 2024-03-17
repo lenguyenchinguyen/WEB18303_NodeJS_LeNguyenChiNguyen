@@ -1,0 +1,113 @@
+ <style>
+  .sua {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sua h2 {
+    color: #333;
+}
+
+.sua .mb-3 {
+    margin-bottom: 20px;
+}
+
+.sua label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.sua input,
+.sua textarea,
+.sua select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sua button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sua button:hover {
+    background-color: #0056b3;
+}
+
+#update {
+    text-align: left;
+}
+
+ </style>
+ 
+<div class="sua" style="padding: 2%;" id="update">
+    <center>
+        <h2>Sửa Sản Phẩm</h2>
+    </center>
+    <div>
+        <div class="mb-3">
+            <label for="" class="form-label">Tên SP</label>
+            <input type="text" class="form-control" name="name" placeholder="Nhập vào tên" id="nameInput">
+            <span id="nameError" style="color: red;"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Ảnh SP</label>
+            <img id="img" src=""  width="140px" alt="">
+            <input id="anh1" class="form-control" type="file" name="img">
+            <span id="imageError" style="color: red;"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Giá SP</label>
+            <input type="number" class="form-control" name="price" placeholder="Nhập vào giá" id="priceInput">
+            <span id="priceError" style="color: red;"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Giá khuyến mãi</label>
+            <input type="number" class="form-control" name="sale" placeholder="Nhập vào giá" id="saleInput" >
+            <span id="saleError" style="color: red;"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Danh Mục</label> <br />
+            <select name="id-category" id="categorySelect" class="form-control" style="padding: 4px;">
+
+            </select>
+            <span id="categoryError" style="color: red;"></span>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Hotdeal</label>
+            <input type="number" class="form-control" name="hotdeal1" min="0" max="5" placeholder="" id="hotdealInput" >
+            <span id="hotdealError" style="color: red;"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Đánh giá</label>
+            <input type="number" class="form-control" name="danhgia" min="0" max="5" placeholder="" id="starInput" >
+            <span id="starError" style="color: red;"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mô tả</label>
+            <textarea class="form-control" name="" rows="3" id="descriptionInput"></textarea>
+            <span id="descriptionError" style="color: red;"></span>
+        </div>
+       <hr>
+        <button type="submit" name="btn-add" class="btn btn-primary" onclick="update()">Sửa</button>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script src="./sanpham/update.js"></script>

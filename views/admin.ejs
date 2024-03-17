@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+
+button a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #3f5c3c;
+}
+a{
+    color: wheat;
+}
+
+</style>
+<body>
+    <div class="row">
+        <div class="col-md-2 " style="background-color: rgb(86, 86, 86);">
+            <div class="logo"> <a class="navbar-brand text-success logo  align-self-center" href="/">
+                <span style="color: rgb(5, 77, 5);"><b>Book</b></span>
+                <span style="color: green;"><b>Heaven</b></span>
+              </a></div>
+            <hr>
+            <p ><i class="bi bi-people-fill me-2"></i><a  href="/admin">Trang chủ</a></p>
+            <p ><i class="bi bi-box-seam me-2"></i><a  href="/admin">  sản phẩm</a></p>
+          
+            
+            <hr>
+           
+        </div>
+        <div class="col-md-10">
+            <div class="top" style="background-color: rgb(146, 146, 146);">
+                <p>TRANG QUẢN TRỊ</p>
+              
+            </div>
+            <div class="content">
+                   
+                    <table>
+                        <thead>
+                            <tr>
+                                <h1>Danh sách sản phẩm</h1>
+                                <th>STT</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá </th>
+                                <th>Đánh giá</th>
+                                <th>Mô tả</th>
+                                <th>Ảnh</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin">
+                            <%  data.forEach(element => { %>
+                                <tr>
+                                    <td><%= element.id %></td>
+                                    <td><%= element.name %></td>
+                                    <td><%= element.price %></td>
+                                    <td><%= element.shortDescription %></td>
+                                    <td><%= element.detailedDescription %></td>
+                                    <td><img src="./img/<%= element.images %>" alt="" style="width: 100px;"></td>
+                                    <td>
+                                    <button class="bt1">Sua</button>
+                                    <button class="bt2">Xoa</button>
+                                    </td>
+                                   
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                    <button class="bt3">
+                        <a  href="/add_sp">
+                            Thêm sản phẩm
+                        </a>
+                    </button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer style="background-color: rgb(146, 146, 146);"><p>@2024 by BookHeaven</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</body>
+</html>     

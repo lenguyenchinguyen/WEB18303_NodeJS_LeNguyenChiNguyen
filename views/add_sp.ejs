@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_addsp.css">
+
+</head>
+<style>
+
+button a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #3f5c3c;
+}
+a{
+    color: wheat;
+}
+
+</style>
+<body>
+    <div class="row">
+        <div class="col-md-2 " style="background-color: rgb(86, 86, 86);">
+            <div class="logo"> <a class="navbar-brand text-success logo  align-self-center" href="/">
+                <span style="color: rgb(5, 77, 5);"><b>Book</b></span>
+                <span style="color: green;"><b>Heaven</b></span>
+              </a></div>
+            <hr>
+            <p ><i class="bi bi-people-fill me-2"></i><a  href="/admin">Trang chủ</a></p>
+            <p ><i class="bi bi-box-seam me-2"></i><a  href="/admin">  sản phẩm</a></p>
+          
+            
+            <hr>
+           
+        </div>
+        <div class="col-md-10">
+            <div class="top" style="background-color: rgb(146, 146, 146);">
+                <p>TRANG QUẢN TRỊ</p>
+              
+            </div>
+            <div class="add_sp" style="padding: 2%;" id="add">
+                <center>
+                    <h2>THÊM MỚI SẢN PHẨM</h2>
+                </center>
+                <div class="form-container">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Tên Sản phẩm </label>
+                        <input type="text" class="form-control" name="name" placeholder="Nhập vào tên" id="nameInput"
+                            value="">
+                        <span id="nameError" style="color: red;"></span>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Ảnh Sản phẩm</label>
+                        <img src="" width="140px" alt="">
+                        <input id="anh" class="form-control" type="file" name="img">
+                        <span id="imageError" style="color: red;"></span>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="" class="form-label">Giá Sản phẩm</label>
+                        <input type="number" class="form-control" name="price" placeholder="Nhập vào giá" id="priceInput"
+                            value="">
+                        <span id="priceError" style="color: red;"></span>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="" class="form-label">Giá khuyến mãi</label>
+                        <input type="number" class="form-control" name="sale" placeholder="Nhập vào giá" id="saleInput" value="">
+                        <span id="saleError" style="color: red;"></span>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label class="form-label">Danh Mục</label> <br />
+                        <select name="id-category" id="categorySelect" class="form-control" style="padding: 4px;">
+                            
+                        </select>
+                        <span id="categoryError" style="color: red;"></span>
+                    </div>
+        
+            
+                    <div class="mb-3">
+                        <label for="" class="form-label">Đánh giá</label>
+                        <input type="number" class="form-control" name="danhgia" min="0" max="5" placeholder="" id="starInput" value="">
+                        <span id="starError" style="color: red;"></span>
+                    </div>
+            
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mô tả</label>
+                        <textarea class="form-control" name="" rows="3" id="descriptionInput"></textarea>
+                        <span id="descriptionError" style="color: red;"></span>
+                    </div>
+                   <hr>
+                    <button type="submit" name="btn-add" class="btn btn-primary" onclick="add()">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer style="background-color: rgb(146, 146, 146);"><p>@2024 by BookHeaven</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</body>
+</html>     
